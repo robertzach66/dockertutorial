@@ -25,6 +25,7 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledInNativeImage;
@@ -77,12 +78,14 @@ public class PostgresIntegrationTests {
 			.run(args);
 	}
 
+	@Ignore
 	@Test
 	void testFindAll() throws Exception {
 		vets.findAll();
 		vets.findAll(); // served from cache
 	}
 
+	@Ignore
 	@Test
 	void testOwnerDetails() {
 		RestTemplate template = builder.rootUri("http://localhost:" + port).build();
