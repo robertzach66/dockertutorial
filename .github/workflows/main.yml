@@ -20,13 +20,13 @@ jobs:
         uses: docker/setup-buildx-action@v3
       -
         name: Build and test
-        uses: docker/build-pudh-action@v6
+        uses: docker/build-push-action@v6
         with:
           target: test
           load: true
       -
         name: Build and oush
-        uses: docker/build-pudh-action@v6
+        uses: docker/build-push-action@v6
         with:
           platform: linux/amd64, linux/arm64
           push: true
